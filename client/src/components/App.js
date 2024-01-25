@@ -8,6 +8,8 @@ import NotFound from "./pages/NotFound.js";
 import Skeleton from "./pages/Skeleton.js";
 import Discover from "./pages/Discover.js";
 import NavBar from "./pages/NavBar.js";
+import Collections from "./pages/Collections.js";
+import Explore from "./pages/Explore.js";
 
 import "../utilities.css";
 
@@ -65,11 +67,27 @@ const App = () => {
         path="/discover"
         element={
           <div>
-            <NavBar />
-            <Discover />
+            <NavBar /> <Discover />
           </div>
         }
       />
+      <Route
+        path="/collections"
+        element={
+          <div>
+            <NavBar /> <Collections />
+          </div>
+        }
+      />
+      <Route
+        path="/explore"
+        element={
+          <div>
+            <NavBar /> <Explore />
+          </div>
+        }
+      />
+
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
