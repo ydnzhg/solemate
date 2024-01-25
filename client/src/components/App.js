@@ -7,6 +7,7 @@ import jwt_decode from "jwt-decode";
 import NotFound from "./pages/NotFound.js";
 import Skeleton from "./pages/Skeleton.js";
 import Discover from "./pages/Discover.js";
+import NavBar from "./pages/NavBar.js";
 
 import "../utilities.css";
 
@@ -60,7 +61,15 @@ const App = () => {
           />
         }
       />
-      <Route path="/discover" element={<Discover />} />
+      <Route
+        path="/discover"
+        element={
+          <div>
+            <NavBar />
+            <Discover />
+          </div>
+        }
+      />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
