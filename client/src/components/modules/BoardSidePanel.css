@@ -1,0 +1,37 @@
+.SidePanel-container {
+  width: 16%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.SidePanel-addButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: var(--s);
+  border-bottom: 1px solid #ddd;
+}
+
+.SidePanel-addIcon {
+  width: 16px;
+  height: 16px;
+}
+
+.SidePanel-addText {
+  margin: 0;
+}
+
+.SidePanel-board {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: var(--s);
+}
+
+.SidePanel-boardName {
+  margin: 0;
+}
