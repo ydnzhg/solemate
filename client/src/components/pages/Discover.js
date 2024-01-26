@@ -4,6 +4,7 @@ import "../../utilities.css";
 import "./Discover.css";
 
 import ShoeCard from "../modules/ShoeCard";
+import ButtonDock from "../modules/ButtonDock";
 
 const placeholderData = {
   brand: "Nike",
@@ -18,7 +19,7 @@ const placeholderData = {
 
 const Discover = () => {
   return (
-    <div>
+    <div className="Discover-container">
       <h1>Welcome to the Homepage!</h1>
       <ShoeCard
         brand={placeholderData.brand}
@@ -28,6 +29,7 @@ const Discover = () => {
         price={placeholderData.price}
         image={placeholderData.image}
       />
+      <ButtonDock />
     </div>
   );
 };
