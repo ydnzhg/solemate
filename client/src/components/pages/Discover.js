@@ -10,7 +10,7 @@ const placeholderData = {
   brand: "Nike",
   item_name: "Air Force 1",
   description:
-    "The Nike Air Force 1 '07 LV8 incorporates the same hoops-inspired performance features of the 1982 original while adding fresh design details for an updated look.",
+    "The Nike Air Force 1 ‘07 ‘Triple White’ gives the classic silhouette a blank-slate makeover, one that accentuates the shoe’s classic lines. Built with white leather, the upper is appointed with heritage details, including a perforated toe box, variable width lacing, and metallic silver lace dubrae. A matching white rubber cupsole packs an Air-sole heel unit encapsulated in lightweight foam. Underfoot, the rubber outsole features the original pivot-point traction pattern.",
   color: "White/White",
   price: "$110",
   image:
