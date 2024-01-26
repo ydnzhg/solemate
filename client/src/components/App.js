@@ -7,7 +7,7 @@ import jwt_decode from "jwt-decode";
 import NotFound from "./pages/NotFound.js";
 import Skeleton from "./pages/Skeleton.js";
 import Discover from "./pages/Discover.js";
-import NavBar from "./pages/NavBar.js";
+import NavBar from "./modules/NavBar.js";
 import Collections from "./pages/Collections.js";
 import Explore from "./pages/Explore.js";
 
