@@ -14,6 +14,7 @@
   align-items: center;
   padding: var(--s);
   border-bottom: 1px solid #ddd;
+  gap: var(--s);
 }
 
 .SidePanel-addIcon {
@@ -31,6 +32,7 @@
   align-items: center;
   border-bottom: 1px solid #ddd;
   padding: var(--s);
+  gap: var(--s);
 }
 
 .SidePanel-boardName {
