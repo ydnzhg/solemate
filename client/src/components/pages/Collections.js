@@ -1,6 +1,7 @@
 import React from "react";
 import BoardSidePanel from "../modules/BoardSidePanel";
 import BoardDisplay from "../modules/BoardDisplay";
+import NewBoardForm from "../modules/NewBoardForm";
 import { useState } from "react";
 
 import "./Collections.css";

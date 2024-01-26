@@ -7,7 +7,12 @@ import "./BoardSidePanel.css";
 const BoardSidePanel = (props) => {
   return (
     <div className="SidePanel-container">
-      <div className="SidePanel-addButton" onClick={() => console.log("Add Button clicked")}>
+      <div
+        className="SidePanel-addButton"
+        onClick={() => {
+          console.log("Add Button clicked");
+        }}
+      >
         <IoAddOutline className="SidePanel-addIcon" />
         <p className="SidePanel-addText">Add Board</p>
       </div>
