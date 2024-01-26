@@ -1,10 +1,13 @@
 import React from "react";
 
+import BoardGrid from "../modules/BoardGrid";
+import SortBar from "../modules/SortBar";
+
 const Explore = () => {
   return (
     <div>
-      <h1>Welcome to the Explore page!</h1>
-      {/* Add your homepage content here */}
+      <SortBar />
+      <BoardGrid />
     </div>
   );
 };

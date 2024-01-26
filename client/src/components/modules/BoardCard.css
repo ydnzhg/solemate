@@ -1,0 +1,36 @@
+.BoardCard-container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 240px;
+  border-radius: var(--s);
+  margin: 0;
+}
+
+.BoardCard-container:hover {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+.BoardCard-image {
+  float: left;
+  padding: var(--s);
+  object-fit: cover;
+  border-radius: var(--s);
+}
+
+.BoardCard-text {
+  padding: var(--s);
+}
+
+.BoardCard-name {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.BoardCard-creator {
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0;
+}

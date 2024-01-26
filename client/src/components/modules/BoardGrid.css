@@ -1,0 +1,7 @@
+.BoardGrid-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--s);
+  padding: var(--m);
+}
