@@ -2,7 +2,7 @@ import React from "react";
 
 import "./BoardCard.css";
 
-const BoardCard = () => {
+const BoardCard = (props) => {
   return (
     <div className="BoardCard-container">
       <img

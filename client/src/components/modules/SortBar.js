@@ -5,16 +5,11 @@ import "./SortBar.css";
 const SortBar = (props) => {
   return (
     <div className="SortBar-container">
-      <label>
-        Sort By:
-        <select>
-          <option value="">Select an option</option>
-          <option value="trending">Trending</option>
-          <option value="newest">Newest</option>
-          <option value="oldest">Oldest</option>
-          <option value="creator">Creator</option>
-        </select>
-      </label>
+      <p className="SortBar-option">Sort By: </p>
+      <p className="SortBar-option">Trending</p>
+      <p className="SortBar-option">Newest</p>
+      <p className="SortBar-option">Oldest</p>
+      <p className="SortBar-option">Creator</p>
     </div>
   );
 };
