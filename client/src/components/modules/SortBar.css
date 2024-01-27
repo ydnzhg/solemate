@@ -10,3 +10,7 @@
 .SortBar-option {
   margin: 0;
 }
+
+.SortBar-option:hover {
+  background-color: bisque;
+}
