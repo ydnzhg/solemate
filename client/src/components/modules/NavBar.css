@@ -1,0 +1,17 @@
+.NavBar-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  gap: var(--m);
+}
+
+.NavBar-link {
+  margin: 0;
+}
+
+.NavBar-logo {
+  width: 48px;
+  height: 48px;
+}

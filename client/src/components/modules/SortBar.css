@@ -1,0 +1,16 @@
+.SortBar-container {
+  margin: 0;
+  padding: var(--l) var(--l) 0 var(--l);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--m);
+}
+
+.SortBar-option {
+  margin: 0;
+}
+
+.SortBar-option:hover {
+  background-color: bisque;
+}

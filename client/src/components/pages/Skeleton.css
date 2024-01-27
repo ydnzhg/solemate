@@ -1,1 +1,16 @@
-/* Fill me in :) */
+.landing-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+
+.landing-logo {
+  width: 24%;
+  border-radius: 8%;
+}
+
+.landing-text {
+  font-weight: 700;
+}

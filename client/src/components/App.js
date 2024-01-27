@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import jwt_decode from "jwt-decode";
 
 import NotFound from "./pages/NotFound.js";
 import Skeleton from "./pages/Skeleton.js";
+import Discover from "./pages/Discover.js";
+import NavBar from "./modules/NavBar.js";
+import Collections from "./pages/Collections.js";
+import Explore from "./pages/Explore.js";
 
 import "../utilities.css";
 
@@ -27,6 +32,8 @@ const App = () => {
     });
   }, []);
 
+  const navigate = useNavigate();
+
   const handleLogin = (credentialResponse) => {
     const userToken = credentialResponse.credential;
     const decodedCredential = jwt_decode(userToken);
@@ -34,6 +41,7 @@ const App = () => {
     post("/api/login", { token: userToken }).then((user) => {
       setUserId(user._id);
       post("/api/initsocket", { socketid: socket.id });
+      navigate("/discover");
     });
   };
 
@@ -55,6 +63,31 @@ const App = () => {
           />
         }
       />
+      <Route
+        path="/discover"
+        element={
+          <div>
+            <NavBar /> <Discover />
+          </div>
+        }
+      />
+      <Route
+        path="/collections"
+        element={
+          <div>
+            <NavBar /> <Collections />
+          </div>
+        }
+      />
+      <Route
+        path="/explore"
+        element={
+          <div>
+            <NavBar /> <Explore />
+          </div>
+        }
+      />
+
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
