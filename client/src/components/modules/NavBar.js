@@ -7,11 +7,7 @@ import "./NavBar.css";
 const NavBar = (props) => {
   return (
     <nav className="NavBar-container">
-      <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCagTXzKoHSBDXnWj1p1kLB6WkoXuFwwZX_g&usqp=CAU"
-        alt="logo"
-        className="NavBar-logo"
-      />
+      <img src="./logo.png" alt="logo" className="NavBar-logo" />
       <Link to="/discover" className="NavBar-link">
         Discover
       </Link>
@@ -21,6 +17,10 @@ const NavBar = (props) => {
       <Link to="/explore" className="NavBar-link">
         Explore
       </Link>
+      <div className="NavBar-profile">
+        <p>{props.username}</p>
+        <img src={props.profilePicture} alt="profile picture" />
+      </div>
     </nav>
   );
 };

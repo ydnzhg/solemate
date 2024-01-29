@@ -22,6 +22,7 @@ import { get, post } from "../utilities";
  */
 const App = () => {
   const [userId, setUserId] = useState(undefined);
+  const [username, setUsername] = useState(undefined);
 
   useEffect(() => {
     get("/api/whoami").then((user) => {
@@ -38,6 +39,7 @@ const App = () => {
     const userToken = credentialResponse.credential;
     const decodedCredential = jwt_decode(userToken);
     console.log(`Logged in as ${decodedCredential.name}`);
+    setUsername(decodedCredential.name);
     post("/api/login", { token: userToken }).then((user) => {
       setUserId(user._id);
       post("/api/initsocket", { socketid: socket.id });
@@ -67,7 +69,7 @@ const App = () => {
         path="/discover"
         element={
           <div>
-            <NavBar /> <Discover />
+            <NavBar username={username} /> <Discover />
           </div>
         }
       />
@@ -75,7 +77,7 @@ const App = () => {
         path="/collections"
         element={
           <div>
-            <NavBar /> <Collections />
+            <NavBar username={username} /> <Collections />
           </div>
         }
       />
@@ -83,7 +85,7 @@ const App = () => {
         path="/explore"
         element={
           <div>
-            <NavBar /> <Explore />
+            <NavBar username={username} /> <Explore />
           </div>
         }
       />

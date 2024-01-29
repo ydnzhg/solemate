@@ -5,6 +5,7 @@
   background-color: #fff;
   border-bottom: 1px solid #ddd;
   gap: var(--m);
+  height: 56px;
 }
 
 .NavBar-link {
@@ -12,6 +13,13 @@
 }
 
 .NavBar-logo {
-  width: 48px;
-  height: 48px;
+  height: 56px;
+  width: 56px;
+}
+
+.NavBar-profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--m);
 }
