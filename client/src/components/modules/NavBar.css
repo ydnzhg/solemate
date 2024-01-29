@@ -1,4 +1,4 @@
-.NavBar-container {
+.NavBar-links {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -22,4 +22,12 @@
   flex-direction: row;
   align-items: center;
   gap: var(--m);
+  justify-content: flex-end;
+}
+
+.NavBar-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
