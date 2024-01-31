@@ -12,5 +12,5 @@
 }
 
 .SortBar-option:hover {
-  background-color: bisque;
+  background-color: var(--secondary);
 }
