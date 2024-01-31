@@ -1,6 +1,7 @@
 import React from "react";
 import { IoAddOutline } from "react-icons/io5";
 import { IoGridOutline } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
 
 import "./BoardSidePanel.css";
 
@@ -10,7 +11,7 @@ const BoardSidePanel = (props) => {
       <div
         className="SidePanel-addButton"
         onClick={() => {
-          console.log("Add Button clicked");
+          props.setEditing(true);
         }}
       >
         <IoAddOutline className="SidePanel-addIcon" />
@@ -22,6 +23,7 @@ const BoardSidePanel = (props) => {
             key={board}
             className="SidePanel-board"
             onClick={() => {
+              props.setEditing(false);
               console.log("Board clicked");
               props.setSelectedBoard(props.placeholderBoards.indexOf(board));
             }}

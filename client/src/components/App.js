@@ -16,6 +16,7 @@ import "../utilities.css";
 import { socket } from "../client-socket.js";
 
 import { get, post } from "../utilities";
+import EditBoard from "./modules/EditBoard.js";
 
 /**
  * Define the "App" component
@@ -89,7 +90,6 @@ const App = () => {
           </div>
         }
       />
-
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

@@ -1,7 +1,7 @@
 import React from "react";
 import BoardSidePanel from "../modules/BoardSidePanel";
 import BoardDisplay from "../modules/BoardDisplay";
-import NewBoardForm from "../modules/NewBoardForm";
+import EditBoard from "../modules/EditBoard";
 import { useState } from "react";
 
 import "./Collections.css";
@@ -142,11 +142,20 @@ const placeholderBoards = [
 
 const Collections = () => {
   const [selectedBoard, setSelectedBoard] = useState(0);
+  const [editing, setEditing] = useState(false);
 
   return (
     <div className="Collections-container">
-      <BoardSidePanel placeholderBoards={placeholderBoards} setSelectedBoard={setSelectedBoard} />
-      <BoardDisplay placeholderBoards={placeholderBoards} selectedBoard={selectedBoard} />
+      <BoardSidePanel
+        placeholderBoards={placeholderBoards}
+        setSelectedBoard={setSelectedBoard}
+        setEditing={setEditing}
+      />
+      {editing ? (
+        <EditBoard />
+      ) : (
+        <BoardDisplay placeholderBoards={placeholderBoards} selectedBoard={selectedBoard} />
+      )}
     </div>
   );
 };
