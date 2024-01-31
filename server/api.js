@@ -49,6 +49,10 @@ router.get("/boards", (req, res) => {
   Board.find({}).then((boards) => res.send(boards));
 });
 
+router.get("/public-boards", (req, res) => {
+  Board.find({ public: true }).then((boards) => res.send(boards));
+});
+
 router.post("/board", (req, res) => {
   const newBoard = new Board({
     name: req.body.name,

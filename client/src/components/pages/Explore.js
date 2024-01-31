@@ -12,7 +12,7 @@ const Explore = () => {
   const [boards, setBoards] = useState([]);
 
   useEffect(() => {
-    get("/api/boards").then((boardObjs) => {
+    get("/api/public-boards").then((boardObjs) => {
       setBoards(boardObjs);
     });
   }, []);
