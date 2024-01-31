@@ -20,7 +20,6 @@ const placeholderData = {
 const Discover = () => {
   return (
     <div className="Discover-container">
-      <h1>Welcome to the Homepage!</h1>
       <ShoeCard
         brand={placeholderData.brand}
         item_name={placeholderData.item_name}
