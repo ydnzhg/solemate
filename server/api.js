@@ -12,7 +12,7 @@ const express = require("express");
 // import models so we can interact with the database
 const User = require("./models/user");
 const Board = require("./models/board");
-const Shoe = require("./models/Shoe");
+const Shoe = require("./models/shoe");
 
 // import authentication library
 const auth = require("./auth");
