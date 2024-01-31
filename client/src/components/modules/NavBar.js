@@ -7,7 +7,7 @@ import "./NavBar.css";
 const NavBar = (props) => {
   return (
     <nav className="NavBar-container">
-      <img src="./logo.png" alt="logo" className="NavBar-logo" />
+      <img src="./logo-no-name.png" alt="logo" className="NavBar-logo" />
       <Link to="/discover" className="NavBar-link">
         Discover
       </Link>

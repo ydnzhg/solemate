@@ -1,11 +1,11 @@
 .SidePanel-container {
   width: 16%;
-  background-color: rgb(255, 255, 255);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--grey);
   overflow: hidden;
   display: flex;
   flex-direction: column;
   height: 100vh;
+  border-right: 1px solid #ddd;
 }
 
 .SidePanel-addButton {
