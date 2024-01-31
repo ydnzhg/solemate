@@ -24,38 +24,46 @@
 .BoardDisplay-boardText {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   margin: 0;
+  width: 300px;
 }
 
 .BoardDisplay-boardName {
   font-weight: 700;
-  font-size: 24px;
+  font-size: 40px;
   margin: 0;
 }
 
 .BoardDisplay-boardDescription {
-  margin: 0;
+  margin: var(--s) 0;
 }
 
-.BoardDisplay-boardOwner {
+.BoardDisplay-properties {
+  font-size: 12px;
   margin: 0;
 }
 
 .BoardDisplay-buttonList {
   display: flex;
-  flex-direction: row;
-  gap: var(--m);
+  flex-direction: column;
+  gap: var(--s);
   padding: var(--l);
 }
 
 .BoardDisplay-button {
   border-radius: 50%;
-  height: 48px;
-  width: 48px;
+  height: 40px;
+  width: 40px;
+  background-color: var(--secondary);
+  color: var(--white);
   margin: 0;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
-.BoardDisplay-buttonText {
-  margin: 0;
+.BoardDisplay-buttonIcon {
+  height: 20px;
+  width: 20px;
 }

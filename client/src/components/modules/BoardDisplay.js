@@ -3,6 +3,9 @@ import React from "react";
 import "./BoardDisplay.css";
 
 import ShoeCardGrid from "./ShoeCardGrid";
+import { IoLockClosed } from "react-icons/io5";
+import { IoPencil } from "react-icons/io5";
+import { IoLogoPinterest } from "react-icons/io5";
 
 const BoardDisplay = (props) => {
   return (
@@ -14,20 +17,29 @@ const BoardDisplay = (props) => {
           className="BoardDisplay-boardImage"
         />
         <div className="BoardDisplay-boardText">
-          <p className="BoardDisplay-boardName">
-            {props.placeholderBoards[props.selectedBoard].name}
-          </p>
-          <p className="BoardDisplay-boardDescription">
-            {props.placeholderBoards[props.selectedBoard].description}
-          </p>
-          <p className="BoardDisplay-boardOwner">
-            Author: {props.placeholderBoards[props.selectedBoard].creator}
+          <div>
+            <p className="BoardDisplay-boardName">
+              {props.placeholderBoards[props.selectedBoard].name}
+            </p>
+            <p className="BoardDisplay-boardDescription">
+              {props.placeholderBoards[props.selectedBoard].description}
+            </p>
+          </div>
+          <p className="BoardDisplay-properties">
+            <b>{props.placeholderBoards[props.selectedBoard].creator}</b>, 1/30/24 | 0 shoes | 0
+            likes
           </p>
         </div>
         <div className="BoardDisplay-buttonList">
-          <button className="BoardDisplay-button">Edit</button>
-          <button className="BoardDisplay-button">Share</button>
-          <button className="BoardDisplay-button">Export</button>
+          <div className="BoardDisplay-button">
+            <IoPencil className="BoardDisplay-buttonIcon" />
+          </div>
+          <div className="BoardDisplay-button">
+            <IoLockClosed className="BoardDisplay-buttonIcon" />
+          </div>
+          <div className="BoardDisplay-button">
+            <IoLogoPinterest className="BoardDisplay-buttonIcon" />
+          </div>
         </div>
       </div>
       <ShoeCardGrid
