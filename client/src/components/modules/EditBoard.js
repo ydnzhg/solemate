@@ -17,7 +17,7 @@ const NewBoardForm = () => {
   };
 
   const handleImageChange = (e) => {
-    setImage(URL.createObjectURL(e.target.files[0]));
+    setImage(e.target.value);
   };
 
   const handleSubmit = (e) => {
@@ -31,16 +31,30 @@ const NewBoardForm = () => {
   return (
     <div className="EditBoard-container">
       <form onSubmit={handleSubmit} className="EditBoard-form">
-        <input type="text" value={name} placeholder="Add Name" onChange={handleNameChange} />
-        <input
-          type="text"
-          value={description}
-          placeholder="Add Description"
-          onChange={handleDescriptionChange}
-        />
-        <input type="file" onChange={handleImageChange} accept="image/png, image/jpg" />
-        <img src={image} className="EditBoard-displayImage" />
-        <button type="submit">Submit</button>
+        <img src={image} className="EditBoard-image" />
+        <div className="EditBoard-text">
+          <input
+            type="text"
+            value={name}
+            placeholder="Add Name"
+            onChange={handleNameChange}
+            className="EditBoard-name"
+          />
+          <textarea
+            type="text"
+            value={description}
+            placeholder="Add Description"
+            onChange={handleDescriptionChange}
+            className="EditBoard-description"
+          />
+          <p className="EditBoard-properties">
+            <b>Creator</b>, 1/30/24 | 0 shoes | 0 likes
+          </p>
+        </div>
+        <div className="EditBoard-buttons">
+          <input type="text" onChange={handleImageChange} placeholder="Paste image URL" />
+          <button type="submit">Done</button>
+        </div>
       </form>
     </div>
   );

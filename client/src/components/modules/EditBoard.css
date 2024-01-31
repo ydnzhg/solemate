@@ -1,25 +1,83 @@
 .EditBoard-container {
   width: 84%;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  background-color: aquamarine;
 }
 
 .EditBoard-form {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: var(--m);
-  border-radius: var(--m);
+  flex-direction: row;
+  height: 24%;
+  width: min-content;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--white);
+  gap: var(--m);
+  padding: var(--l);
 }
 
-.EditBoard-name {
-}
-
-.EditBoard-displayImage {
+.EditBoard-image {
+  border-radius: var(--s);
   width: 300px;
   height: full;
   object-fit: cover;
+  border: var(--darkgrey) 2px solid;
+}
+
+.EditBoard-chooseImage {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s);
+  margin: 0;
+  height: min-content;
+}
+
+.EditBoard-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s);
+  margin: 0;
+  height: 24vh;
+}
+
+.EditBoard-name {
+  font-weight: 700;
+  font-size: 24px;
+  margin: 0;
+  padding: var(--s);
+  border: var(--darkgrey) 2px solid;
+  border-radius: var(--s);
+}
+
+.EditBoard-name:focus {
+  outline: 2px solid var(--secondary);
+}
+
+.EditBoard-description {
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0;
+  padding: var(--s);
+  border: var(--darkgrey) 2px solid;
+  border-radius: var(--s);
+  height: 300px;
+  font-family: Inter;
+}
+
+.EditBoard-description:focus {
+  outline: 2px solid var(--secondary);
+}
+
+.EditBoard-owner {
+  margin: 0;
+}
+
+.EditBoard-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.EditBoard-properties {
+  font-size: 14px;
+  margin: 0;
 }

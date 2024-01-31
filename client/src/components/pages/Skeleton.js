@@ -13,7 +13,6 @@ const Skeleton = ({ userId, handleLogin, handleLogout }) => {
     <GoogleOAuthProvider clientId={GOOGLE_CLIENT_ID}>
       <div className="landing-display">
         <img src="./logo.png" alt="logo" className="landing-logo" />
-        <p className="landing-text">A new way to shop for shoes</p>
         {userId ? (
           <button
             onClick={() => {
