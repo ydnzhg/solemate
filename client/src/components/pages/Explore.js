@@ -9,18 +9,18 @@ import { get } from "../../utilities";
 import { useState, useEffect } from "react";
 
 const Explore = () => {
-  const [boards, setBoards] = useState([]);
+  const [publicBoards, setPublicBoards] = useState([]);
 
   useEffect(() => {
     get("/api/public-boards").then((boardObjs) => {
-      setBoards(boardObjs);
+      setPublicBoards(boardObjs);
     });
   }, []);
 
   return (
     <div>
       <SortBar />
-      <BoardGrid boards={boards} />
+      <BoardGrid boards={publicBoards} />
     </div>
   );
 };
