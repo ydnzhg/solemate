@@ -56,6 +56,10 @@ const NewBoardForm = () => {
           <button type="submit">Done</button>
         </div>
       </form>
+      <div>
+        <p className="ShoeGrid-heading">Added Shoes</p>
+        <p className="ShoeGrid-empty">No shoes in board yet!</p>
+      </div>
     </div>
   );
 };

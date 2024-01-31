@@ -1,7 +1,6 @@
 .EditBoard-container {
   width: 84%;
   overflow: hidden;
-  background-color: aquamarine;
 }
 
 .EditBoard-form {
@@ -9,7 +8,6 @@
   flex-direction: row;
   height: 24%;
   width: min-content;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   background-color: var(--white);
   gap: var(--m);
   padding: var(--l);
@@ -80,4 +78,14 @@
 .EditBoard-properties {
   font-size: 12px;
   margin: 0;
+}
+
+.ShoeGrid-heading {
+  font-weight: 700;
+  margin: var(--l);
+  font-size: 18px;
+}
+
+.ShoeGrid-empty {
+  margin: var(--l);
 }

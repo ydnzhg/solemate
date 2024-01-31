@@ -31,3 +31,9 @@
   margin: 0;
   font-weight: 700;
 }
+
+.SmallShoeCard-heading {
+  font-weight: 700;
+  margin: var(--l);
+  font-size: 18px;
+}
