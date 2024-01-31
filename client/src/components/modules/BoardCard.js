@@ -5,14 +5,10 @@ import "./BoardCard.css";
 const BoardCard = (props) => {
   return (
     <div className="BoardCard-container">
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/f/fb/XN_Fruehjahrswiese_00.jpg"
-        alt="Board"
-        className="BoardCard-image"
-      />
+      <img src={props.image} alt="Board" className="BoardCard-image" />
       <div className="BoardCard-text">
-        <p className="BoardCard-name">Board Name</p>
-        <p className="BoardCard-creator">Creator</p>
+        <p className="BoardCard-name">{props.name}</p>
+        <p className="BoardCard-creator">{props.creator}</p>
       </div>
     </div>
   );

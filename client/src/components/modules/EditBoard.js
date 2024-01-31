@@ -3,10 +3,24 @@ import React, { useState } from "react";
 import "./EditBoard.css";
 import "../../utilities.css";
 
-const NewBoardForm = () => {
+import { get, post } from "../../utilities";
+
+const NewBoardForm = (props) => {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [image, setImage] = useState("");
+
+  const addBoard = (value) => {
+    const body = {
+      name: value.name,
+      description: value.description,
+      image: value.image,
+    };
+    post("/api/board", body).then((board) => {
+      // display this comment on the screen
+      props.addNewBoard(board);
+    });
+  };
 
   const handleNameChange = (e) => {
     setName(e.target.value);
@@ -26,6 +40,7 @@ const NewBoardForm = () => {
     console.log("description", description);
     console.log("image", image);
     // Handle form submission logic here
+    addBoard({ name: name, description: description, image: image });
   };
 
   return (
@@ -47,12 +62,14 @@ const NewBoardForm = () => {
             onChange={handleDescriptionChange}
             className="EditBoard-description"
           />
-          <p className="EditBoard-properties">
-            <b>Creator</b>, 1/30/24 | 0 shoes | 0 likes
-          </p>
         </div>
         <div className="EditBoard-buttons">
-          <input type="text" onChange={handleImageChange} placeholder="Paste image URL" />
+          <input
+            type="text"
+            onChange={handleImageChange}
+            placeholder="Paste image URL"
+            className="EditBoard-url"
+          />
           <button type="submit">Done</button>
         </div>
       </form>

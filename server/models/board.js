@@ -4,7 +4,7 @@ const BoardSchema = new mongoose.Schema({
   name: String,
   description: String,
   image: String,
-  creator: googleid,
+  creator: String,
   public: Boolean,
   likes: Number,
   date_created: Date,

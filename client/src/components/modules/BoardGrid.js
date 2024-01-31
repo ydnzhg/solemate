@@ -4,18 +4,12 @@ import BoardCard from "./BoardCard";
 
 import "./BoardGrid.css";
 
-const BoardGrid = () => {
+const BoardGrid = (props) => {
   return (
     <div className="BoardGrid-container">
-      <BoardCard />
-      <BoardCard />
-      <BoardCard />
-      <BoardCard />
-      <BoardCard />
-      <BoardCard />
-      <BoardCard />
-      <BoardCard />
-      <BoardCard />
+      {props.boards.map((board) => (
+        <BoardCard image={board.image} name={board.name} creator={board.creator} />
+      ))}
     </div>
   );
 };

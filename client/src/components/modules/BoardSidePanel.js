@@ -18,14 +18,16 @@ const BoardSidePanel = (props) => {
         <p className="SidePanel-addText">Add Board</p>
       </div>
       <div className="SidePanel-boardList">
-        {props.placeholderBoards.map((board) => (
+        {props.boards.map((board) => (
           <div
             key={board}
             className="SidePanel-board"
             onClick={() => {
               props.setEditing(false);
               console.log("Board clicked");
-              props.setSelectedBoard(props.placeholderBoards.indexOf(board));
+              props.setSelectedBoard(props.boards.indexOf(board));
+              console.log(props.boards.indexOf(board));
+              console.log(props.boards[props.selectedBoard]);
             }}
           >
             <IoGridOutline />

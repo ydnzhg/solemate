@@ -8,26 +8,25 @@ import { IoPencil } from "react-icons/io5";
 import { IoLogoPinterest } from "react-icons/io5";
 
 const BoardDisplay = (props) => {
-  return (
+  return props.selectedBoard !== null ? (
     <div className="BoardDisplay-container">
       <div className="BoardDisplay-boardInfo">
         <img
-          src={props.placeholderBoards[props.selectedBoard].image}
+          src={props.boards[props.selectedBoard].image}
           alt="Board"
           className="BoardDisplay-boardImage"
         />
         <div className="BoardDisplay-boardText">
           <div>
-            <p className="BoardDisplay-boardName">
-              {props.placeholderBoards[props.selectedBoard].name}
-            </p>
+            <p className="BoardDisplay-boardName">{props.boards[props.selectedBoard].name}</p>
             <p className="BoardDisplay-boardDescription">
-              {props.placeholderBoards[props.selectedBoard].description}
+              {props.boards[props.selectedBoard].description}
             </p>
           </div>
           <p className="BoardDisplay-properties">
-            <b>{props.placeholderBoards[props.selectedBoard].creator}</b>, 1/30/24 | 0 shoes | 0
-            likes
+            <b>{props.boards[props.selectedBoard].creator}</b> |{" "}
+            {props.boards[props.selectedBoard].shoes.length} shoes |{" "}
+            {props.boards[props.selectedBoard].likes} likes
           </p>
         </div>
         <div className="BoardDisplay-buttonList">
@@ -42,10 +41,11 @@ const BoardDisplay = (props) => {
           </div>
         </div>
       </div>
-      <ShoeCardGrid
-        placeholderBoards={props.placeholderBoards}
-        selectedBoard={props.selectedBoard}
-      />
+      <ShoeCardGrid boards={props.boards} selectedBoard={props.selectedBoard} />
+    </div>
+  ) : (
+    <div>
+      <p className="none-selected">No board selected!</p>
     </div>
   );
 };

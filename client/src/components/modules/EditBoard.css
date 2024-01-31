@@ -46,6 +46,15 @@
   border-radius: var(--s);
 }
 
+.EditBoard-url {
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0;
+  padding: var(--s);
+  border: var(--darkgrey) 2px solid;
+  border-radius: var(--s);
+}
+
 .EditBoard-name:focus {
   outline: 2px solid var(--secondary);
 }

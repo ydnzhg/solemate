@@ -2,7 +2,9 @@ import React from "react";
 import BoardSidePanel from "../modules/BoardSidePanel";
 import BoardDisplay from "../modules/BoardDisplay";
 import EditBoard from "../modules/EditBoard";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+import { get, post } from "../../utilities";
 
 import "./Collections.css";
 
@@ -140,21 +142,33 @@ const placeholderBoards = [
   },
 ];
 
-const Collections = () => {
-  const [selectedBoard, setSelectedBoard] = useState(0);
+const Collections = (props) => {
+  const [selectedBoard, setSelectedBoard] = useState(null);
   const [editing, setEditing] = useState(false);
+  const [boards, setBoards] = useState([]);
+
+  useEffect(() => {
+    get("/api/boards").then((boardObjs) => {
+      setBoards(boardObjs);
+    });
+  }, []);
+
+  const addNewBoard = (boardObj) => {
+    setBoards([boardObj].concat(boards));
+  };
 
   return (
     <div className="Collections-container">
       <BoardSidePanel
-        placeholderBoards={placeholderBoards}
         setSelectedBoard={setSelectedBoard}
+        selectedBoard={selectedBoard}
         setEditing={setEditing}
+        boards={boards}
       />
       {editing ? (
-        <EditBoard />
+        <EditBoard username={props.username} addNewBoard={addNewBoard} />
       ) : (
-        <BoardDisplay placeholderBoards={placeholderBoards} selectedBoard={selectedBoard} />
+        <BoardDisplay boards={boards} selectedBoard={selectedBoard} />
       )}
     </div>
   );

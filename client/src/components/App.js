@@ -78,7 +78,7 @@ const App = () => {
         path="/collections"
         element={
           <div>
-            <NavBar username={username} /> <Collections />
+            <NavBar username={username} /> <Collections username={username} />
           </div>
         }
       />
